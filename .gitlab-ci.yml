@@ -1,0 +1,20 @@
+# Test ci/cd
+stages:
+  - production
+cache:
+  paths:
+    - vendor/ruby
+
+before_script:
+  - ruby -v  # Print out ruby version for debugging
+
+production:
+  stage: production
+  image: ruby:latest
+  only:
+    - main
+  script:
+    - gem install dpl
+    - dpl --provider=heroku --app=$HEROKU_APP_PRODUCTION --api-key=$HEROKU_API_KEY
+  tags:
+    - ruby2

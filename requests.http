@@ -1,0 +1,49 @@
+
+
+### Post 1
+POST http://localhost:8080/api
+Content-Type: application/json
+
+{
+  "firstname": "Gustav",
+  "lastname": "Werner",
+  "age": "44"
+}
+
+### Post 2
+POST http://localhost:8080/api
+Content-Type: application/json
+
+{
+  "firstname": "Test",
+  "lastname": "User",
+  "age": "22"
+}
+
+### get all the user Profiles
+GET http://localhost:8080/api
+
+### get userProfile by Id
+GET http://localhost:8080/api/e7f071b1-d775-4043-b8b2-b4979dfc1c07
+
+##delete a user Profile by ID
+//curl -i -X DELETE http://localhost:8080/{id}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
